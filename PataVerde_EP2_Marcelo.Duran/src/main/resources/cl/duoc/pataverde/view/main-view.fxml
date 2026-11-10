@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="cl.duoc.pataverde.controller.MainController">
+    <padding>
+        <Insets top="15" right="15" bottom="15" left="15"/>
+    </padding>
+
+    <Label text="Registro de pacientes" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+
+    <HBox spacing="15">
+        <!-- Formulario -->
+        <VBox spacing="8" prefWidth="260">
+            <ComboBox fx:id="cmbTipo" promptText="Seleccione tipo..." prefWidth="260"/>
+            <TextField fx:id="txtNombre" promptText="Nombre"/>
+            <TextField fx:id="txtEdad" promptText="Edad (0 a 30)"/>
+            <TextField fx:id="txtPeso" promptText="Peso (kg)"/>
+
+            <Label text="Datos del perro"/>
+            <TextField fx:id="txtRaza" promptText="Raza"/>
+            <CheckBox fx:id="chkVacunado" text="Vacunado"/>
+            <CheckBox fx:id="chkAdopcion" text="Disponible para adopción"/>
+
+            <Label text="Datos del gato"/>
+            <CheckBox fx:id="chkExterior" text="Vive en exterior"/>
+
+            <Button text="Registrar" onAction="#onRegistrar"/>
+        </VBox>
+
+        <!-- Tabla -->
+        <VBox spacing="8" HBox.hgrow="ALWAYS">
+            <TableView fx:id="tabla" prefHeight="320" prefWidth="480">
+                <columnResizePolicy>
+                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+                </columnResizePolicy>
+                <columns>
+                    <TableColumn fx:id="colTipo" text="Tipo"/>
+                    <TableColumn fx:id="colNombre" text="Nombre"/>
+                    <TableColumn fx:id="colEdad" text="Edad"/>
+                    <TableColumn fx:id="colPeso" text="Peso (kg)"/>
+                    <TableColumn fx:id="colCosto" text="Costo consulta"/>
+                </columns>
+            </TableView>
+            <Button text="Eliminar" onAction="#onEliminar"/>
+        </VBox>
+    </HBox>
+
+    <Label fx:id="lblMensaje" wrapText="true"/>
+</VBox>

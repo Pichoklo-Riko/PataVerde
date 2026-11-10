@@ -1,0 +1,14 @@
+[
+  {
+    "exterior": false,
+    "nombre": "Bartolomeo el Grande",
+    "edad": 10,
+    "peso": 25.0
+  },
+  {
+    "exterior": true,
+    "nombre": "Makoto",
+    "edad": 26,
+    "peso": 40.0
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "raza": "Pastor Aleman",
+    "vacunado": true,
+    "disponibleAdopcion": true,
+    "nombre": "Adolf",
+    "edad": 10,
+    "peso": 30.0
+  },
+  {
+    "raza": "Salchicha",
+    "vacunado": false,
+    "disponibleAdopcion": true,
+    "nombre": "Tormenter",
+    "edad": 5,
+    "peso": 10.0
+  }
+]
